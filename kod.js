@@ -20,14 +20,31 @@ function dodaj(objekt) {
   let i;
   for (i = 0; i < objekt.length; i += 1) {
     objekt[i].classList.toggle("js");
-    // objekt[i].classList.toggle("active");
   }
 }
 function dodaj2(objekt) {
   let i;
   for (i = 0; i < objekt.length; i += 1) {
-    console.log("AAAAA");
     objekt[i].classList.toggle("active");
+  }
+}
+function usunincie() {
+  const id_usun = [
+    "bez_js1",
+    "bez_js2",
+    "bez_js3",
+    "bez_js4",
+    "bez_js5",
+    "bez_js6",
+  ];
+
+  for (let i = 0; i < id_usun.length; i++) {
+    var elementDoUsuniecia = document.getElementById(id_usun[i]);
+    if (elementDoUsuniecia) {
+      elementDoUsuniecia.parentNode.removeChild(elementDoUsuniecia);
+    } else {
+      console.log("Element o id " + id_usun[i] + " nie istnieje.");
+    }
   }
 }
 
@@ -148,62 +165,7 @@ if (myBody.id === "index") {
     });
   }
 } else if (myBody.id === "galeria") {
-  let pictJs = document.querySelectorAll("picture");
-  dodaj(pictJs);
-  //   console.log('Id елемента рівний "galeria"');
-  mobilewrapper = document.querySelector(".wrapperGale");
-  zainteres = document.querySelector(".NagluwekGaleria");
-  mobileButton.addEventListener("click", function () {
-    zainteres.classList.toggle("active");
-    mobilewrapper.classList.toggle("active");
-    dodaj2(navigacja);
-    mobileNavLinki.classList.toggle("active");
-    mobileButton.classList.toggle("active");
-  });
-  // console.log("Galeria zdjęć ładowanych sekwencyjnie");
-  // loadIMG(
-  //   "./zdjencia/0.5.jpg",
-  //   "kolona1",
-  //   "KoloGale",
-  //   "ZdjencieGal",
-  //   "./zdjencia/3.800.jpg",
-  //   "./zdjencia/6.640.jpg",
-  //   "./zdjencia/0.7.jpg"
-  // )
-  //   .then(function () {
-  //     console.log("pierwszy z sekwencyjnej załadowany");
-  //     var pr = loadIMG(
-  //       "./zdjencia/0.6.jpg",
-  //       "kolona1",
-  //       null,
-  //       "ZdjencieGal3",
-  //       "./zdjencia/7.800.jpg",
-  //       "./zdjencia/3.640.jpg",
-  //       "./zdjencia/0.2.jpg"
-  //     );
-  //     return pr;
-  //   })
-  //   .then(function () {
-  //     console.log("drugi z sekwencyjnej załadowany");
-  //     var pr = loadIMG(
-  //       "./zdjencia/0.3.jpg",
-  //       "kolona1",
-  //       "KoloGale3",
-  //       "ZdjencieGal",
-  //       "./zdjencia/4.800.jpg",
-  //       "./zdjencia/2.640.jpg",
-  //       "./zdjencia/0.5.jpg"
-  //     );
-  //     return pr;
-  //   })
-  //   .then(function () {
-  //     console.log("trzeci z sekwencyjnej załadowany");
-  //   })
-  //   .catch(function () {
-  //     console.log("Błąd ładowania galerii sekwencyjnej");
-  //   });
-
-  // console.log("Galeria zdjęć ładowanych równolegle");
+  usunincie();
   Promise.all([
     loadIMG(
       "./zdjencia/0.5.jpg",
@@ -266,4 +228,74 @@ if (myBody.id === "index") {
     .catch(function () {
       console.log("Błąd ładowania galerii rownoległej");
     });
+
+  const selectors = [
+    //problem z stopped nie działa dzaila tylko gdy definiujemy cklik po dodaj
+    ".KoloGale",
+    ".KoloGale2",
+    ".KoloGale3",
+  ];
+  for (let i = 0; i < selectors.length; i++) {
+    document.querySelector(selectors[i]).addEventListener("click", function () {
+      for (let j = 0; j < selectors.length; j++) {
+        toggleAnimations(selectors[j]);
+      }
+    });
+  }
+
+  mobilewrapper = document.querySelector(".wrapperGale");
+  zainteres = document.querySelector(".NagluwekGaleria");
+  mobileButton.addEventListener("click", function () {
+    zainteres.classList.toggle("active");
+    mobilewrapper.classList.toggle("active");
+    dodaj2(navigacja);
+    mobileNavLinki.classList.toggle("active");
+    mobileButton.classList.toggle("active");
+  });
+
+  // console.log("Galeria zdjęć ładowanych sekwencyjnie");
+  // loadIMG(
+  //   "./zdjencia/0.5.jpg",
+  //   "kolona1",
+  //   "KoloGale",
+  //   "ZdjencieGal",
+  //   "./zdjencia/3.800.jpg",
+  //   "./zdjencia/6.640.jpg",
+  //   "./zdjencia/0.7.jpg"
+  // )
+  //   .then(function () {
+  //     console.log("pierwszy z sekwencyjnej załadowany");
+  //     var pr = loadIMG(
+  //       "./zdjencia/0.6.jpg",
+  //       "kolona1",
+  //       null,
+  //       "ZdjencieGal3",
+  //       "./zdjencia/7.800.jpg",
+  //       "./zdjencia/3.640.jpg",
+  //       "./zdjencia/0.2.jpg"
+  //     );
+  //     return pr;
+  //   })
+  //   .then(function () {
+  //     console.log("drugi z sekwencyjnej załadowany");
+  //     var pr = loadIMG(
+  //       "./zdjencia/0.3.jpg",
+  //       "kolona1",
+  //       "KoloGale3",
+  //       "ZdjencieGal",
+  //       "./zdjencia/4.800.jpg",
+  //       "./zdjencia/2.640.jpg",
+  //       "./zdjencia/0.5.jpg"
+  //     );
+  //     return pr;
+  //   })
+  //   .then(function () {
+  //     console.log("trzeci z sekwencyjnej załadowany");
+  //   })
+  //   .catch(function () {
+  //     console.log("Błąd ładowania galerii sekwencyjnej");
+  //   });
+
+  // console.log("Galeria zdjęć ładowanych równolegle");
+  //usuniencie zdjenć bezpiecznych(tych co ladujo się bez js)
 }
