@@ -1,0 +1,1318 @@
+* {
+  font-family: "Roboto Mono", monospace;
+  /* box-sizing: border-box; */
+}
+body {
+  font-family: "Roboto Mono", monospace;
+  background: #fdf5ff;
+}
+
+.wrapper,
+.wrapperZai,
+.wrapperPro,
+.wrapperGale {
+  /* display: flex; */
+  /* width: 1200px; */
+  overflow: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin: 0 auto;
+  padding: 0px;
+  background: #ffffff;
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
+  height: 65.5em;
+}
+div.wrapper.active {
+  height: 69em;
+}
+div.wrapperPro.active {
+  height: 67em;
+}
+div.wrapperZai.active {
+  height: 104em;
+}
+div.wrapperGale.active {
+  height: 90em;
+}
+.wrapperZai {
+  height: 98em;
+}
+.wrapperPro {
+  height: 64em;
+}
+.wrapperGale {
+  height: 87.5em;
+}
+.heder {
+  padding-top: 2%;
+}
+.Tytul {
+  /* margin: 0px; */
+  margin: 2.5%;
+  margin-left: 0%;
+  padding: 0px;
+  margin-bottom: 2%;
+}
+nav {
+  /* display: grid; */
+  /* margin-top: 12px; */
+  margin-left: 3%;
+}
+picture.js {
+  display: none;
+}
+nav.heder.js {
+  /* display: grid; */
+  /* margin-top: 12px; */
+  display: flex;
+  /* overflow-y: hidden; */
+  /* scrollbar-width: none;
+  -ms-overflow-style: none; */
+  justify-content: space-between;
+  /* align-items: center; */
+  /* overflow-x: hidden; */
+  position: relative;
+  margin-left: 3%;
+}
+.burger {
+  display: none;
+}
+.burger.js {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: block;
+}
+
+.line {
+  width: 3em;
+  height: 0.3em;
+  background-color: #481251;
+  margin: 0.6em;
+  border-radius: 20px;
+  transition: 0.4s ease-in-out;
+}
+.burger.js.active .line:first-child {
+  transform: translateY(-300px);
+}
+.burger.js.active .line:nth-child(2) {
+  transform: rotate(-48deg) translateY(0);
+}
+.burger.js.active .line:nth-child(3) {
+  transform: rotate(48deg) translate(-7px, -9px);
+}
+
+.Navigacja {
+  text-decoration: none;
+  outline: none;
+  color: black;
+  font-size: 0.9em;
+}
+.Navigacja.js {
+  text-decoration: none;
+  outline: none;
+  color: whitesmoke;
+  /* color: black; */
+  font-size: 1em;
+  padding: 1%;
+}
+/* .Navigacja:hover {
+  font-weight: bold;
+  color: #481251;
+  font-size: 105%;
+} */
+
+.Navigacja.js:hover {
+  font-weight: bold;
+  color: #481251;
+  font-size: 105%;
+  transform: translateY(-10%);
+  /* text-align: center; */
+}
+.Navigacja.js.active:hover {
+  transform: translateY(-10%);
+  color: whitesmoke;
+  /* text-align: center; */
+}
+.linki {
+  margin: 0px;
+  padding: 0px;
+}
+.linki.js {
+  position: absolute;
+  right: 0;
+  top: 103%;
+  width: 103%;
+  visibility: hidden;
+  text-align: center;
+  background-color: #481251;
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+  padding-bottom: 2%;
+  transform: translate(100%);
+  transition: 0.4s ease-in-out;
+}
+div.linki.js.active {
+  visibility: visible;
+  transition: 0.5s ease-in-out;
+  transform: translate(
+    0%
+  ); /* Zastosuj przesunięcie 0% do elementu na osi poziomej */
+}
+/* ///////////////////////////////////////////////////////////////////////////////////////// */
+.PierwszaCzesc {
+  padding: 3%;
+  display: grid;
+  margin-top: 1em;
+  transition: 0.8s ease-in-out;
+}
+div.PierwszaCzesc.active {
+  margin-bottom: 1.5em;
+  transform: translateY(1em);
+  margin-top: 4.2em;
+  transition: 0.3s ease-in-out;
+}
+.gluwneZdjencie {
+  /* border: 10px yellow solid; */
+  position: absolute;
+  width: 58.5%;
+  left: 58px;
+  border-radius: 0.5em;
+  top: 9%;
+  transition: 1s;
+}
+.gluwneZdjencie:hover {
+  transform: scale(1.2);
+}
+.Kolo {
+  background: #481251;
+  position: relative;
+  border-radius: 50%;
+  width: 17.5em;
+  height: 16.5em;
+  left: 8%;
+}
+.Kolo {
+  /* animation-name: moveUpDown;
+  animation-duration: 1s; */
+  animation: moveUpDown 4s linear infinite 2.5s, wyjscie 3.4s linear; /* kolejność jest ważna */
+}
+
+@keyframes wyjscie {
+  /* 0% i 100% oznaca from i to i możemy zmienić animacje po procntac  */
+  0% {
+    transform: translateX(-150%);
+  }
+  50% {
+    transform: translateY(-9%);
+  }
+  90% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.Opis {
+  padding: 0px;
+  margin: 0px;
+  width: 28em;
+  margin-top: 1%;
+  font-size: 76%;
+  /* margin-bottom: 6px; */
+}
+.Nagluwek {
+  padding: 0px;
+  margin: 0px;
+  margin-top: 2%;
+  font-size: 100%;
+}
+.Nagluwek2 {
+  padding: 0px;
+  margin: 0px;
+  margin-top: -3%;
+  margin-left: 3%;
+  font-size: 100%;
+}
+.Lista {
+  padding-left: 7.5%;
+  margin-top: 1%;
+  font-size: 81%;
+  margin-bottom: 0%;
+}
+/* /////////////// */
+/* .Omnie {
+  margin-left: 1em;
+}
+.Zainteresowania {
+  margin-left: 1em;
+}
+.Zainteresowania2 {
+  margin-left: 1em;
+} */
+.Zainteresowania {
+  margin-top: 2%;
+}
+.wiecej {
+  padding-left: 3%;
+  /* margin-top: 1px; */
+  font-size: 78%;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  /* transition: 1s; */
+}
+.wiecej:hover {
+  font-weight: bold;
+  color: #481251;
+  font-size: 90%;
+  /* transform: scale(2); */
+}
+.Zainteresowania2 {
+  margin-top: 5%;
+}
+/* /////////////////////////// */
+.Kolo2 {
+  background: #481251;
+  position: relative;
+  border-radius: 50%;
+  width: 16.9em;
+  display: flow-root;
+  margin: 0%;
+  margin-top: 5%;
+  height: 16em;
+  left: 17%;
+}
+.Kolo2 {
+  /* animation-name: moveUpDown;
+  animation-duration: 1s; */
+  animation: moveUpDown 4s linear infinite 2.3s;
+}
+.Kolo2.stopped,
+.Kolo.stopped {
+  animation-play-state: paused;
+}
+
+@keyframes moveUpDown {
+  /* 0% i 100% oznaca from i to i możemy zmienić animacje po procntac  */
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9%);
+  }
+}
+.NagluwekKont {
+  padding: 0%;
+  margin: 23%;
+  margin-top: 26%;
+  margin-bottom: 0%;
+  /* left: 67px; */
+  color: #ffffff;
+  position: relative;
+}
+.DaneKont {
+  color: #ffff;
+  text-align: center;
+  /* width: 421px; */
+  position: relative;
+  padding: 0%;
+  margin: 0%;
+  margin-top: 5%;
+  left: 0%;
+  font-weight: 400;
+  font-size: 79%;
+}
+/* /////////////////////// */
+.DaneKPos {
+  color: #ffffff;
+  text-decoration: none;
+}
+.DaneKPos:hover {
+  text-decoration: revert;
+}
+.facebook {
+  position: relative;
+  margin: 0%;
+  margin-top: 7%;
+  padding: 0%;
+  width: 13%;
+  left: 31%;
+}
+.facebook:hover {
+  opacity: 0.5;
+}
+.instagram:hover {
+  opacity: 0.5;
+}
+.instagram {
+  position: relative;
+  margin: 0%;
+  margin-top: 5%;
+  padding: 0%;
+  width: 12%;
+  left: 38%;
+  top: 0.5%;
+}
+/* ///////////////// */
+.Nagluwek2Zain {
+  padding: 0px;
+  margin: 0px;
+  margin-top: 3%;
+  margin-left: 3%;
+  font-size: 94%;
+  margin-bottom: 2.2em;
+}
+.ListaZain {
+  margin-top: -2%;
+  font-size: 75%;
+  width: 90%;
+  color: #ffff;
+  margin-bottom: 0%;
+  position: relative;
+  top: 21%;
+  left: 1%;
+}
+.KoloZain,
+.KoloZain2,
+.KoloMale,
+.KoloMale2,
+.KoloMale3,
+.KoloMale4,
+.KoloMale5 {
+  animation: moveUpDown 4s linear infinite;
+}
+
+.KoloZain.stopped,
+.KoloZain2.stopped,
+.KoloMale.stopped,
+.KoloMale2.stopped,
+.KoloMale3.stopped,
+.KoloMale4.stopped,
+.KoloMale5.stopped {
+  animation-play-state: paused;
+}
+
+.KoloZain {
+  background: #6e234d;
+  position: relative;
+  border-radius: 50%;
+  width: 15.5em;
+  height: 17em;
+  left: 2em;
+}
+.KoloMale {
+  background: #6e234d;
+  position: relative;
+  border-radius: 50%;
+  width: 10.5em;
+  height: 10em;
+  left: 11em;
+  top: -1.8em;
+}
+/* ////////////////////////// */
+.Dodatek {
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+  top: 2.5em;
+  font-size: 75%;
+  color: #ffff;
+  width: 12em;
+  left: 2.1em;
+}
+.KoloZain2 {
+  background: #702a69;
+  position: relative;
+  margin: 0px;
+  border-radius: 50%;
+  width: 15.9em;
+  height: 17.5em;
+  top: -1.6em;
+  left: 2em;
+}
+.KoloMale2 {
+  background: #6e234d;
+  position: relative;
+  border-radius: 50%;
+  width: 13em;
+  height: 12.5em;
+  left: 0.5em;
+  top: 0.7em;
+}
+.DodatekMal {
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+  top: 2.5em;
+  font-size: 75%;
+  color: #ffff;
+  width: 12em;
+  left: 3.5em;
+}
+.Nagluwek2Zain2 {
+  padding: 0px;
+  margin: 0px;
+  margin-top: -1em;
+  margin-bottom: 0.7em;
+  margin-left: 3%;
+  font-size: 94%;
+}
+.NieProf {
+  height: 0em;
+}
+.KoloMale3 {
+  background: #08689f;
+  position: relative;
+  border-radius: 50%;
+  width: 9.5em;
+  margin: 0px;
+  padding: 0px;
+  height: 9em;
+  left: 12em;
+  top: -3.7em;
+}
+.DodatekMal2 {
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+  top: 2.5em;
+  font-size: 75%;
+  color: #ffff;
+  width: 11em;
+  left: 1.7em;
+}
+.DodatekMal3 {
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+  top: 4em;
+  font-size: 75%;
+  color: #ffff;
+  width: 16.5em;
+  left: 2.7em;
+}
+.KoloMale4 {
+  background: #40236e;
+  position: relative;
+  border-radius: 50%;
+  width: 15.5em;
+  margin: 0px;
+  padding: 0px;
+  height: 15em;
+  left: 5em;
+  top: -3.5em;
+}
+.DodatekMal4 {
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+  top: 2.2em;
+  font-size: 75%;
+  color: #ffff;
+  width: 11em;
+  left: 2.7em;
+}
+.KoloMale5 {
+  background: #31257e;
+  position: relative;
+  border-radius: 50%;
+  width: 11em;
+  margin: 0px;
+  padding: 0px;
+  height: 10.5em;
+  left: 1em;
+  top: -4.5em;
+}
+/* ///////////////////////// !!!!!!!!! */
+.NagluwekGaleria {
+  padding: 0px;
+  margin: 0px;
+  margin-top: 0.5em;
+  margin-left: 3%;
+  margin-bottom: 1em;
+  text-align: center;
+  font-size: 94%;
+}
+.tab {
+  display: grid;
+  margin: 0px;
+  padding: 0px;
+}
+
+.Kolona1 {
+  margin: 0px;
+  padding: 0px;
+  display: grid;
+  justify-content: center;
+}
+
+.KoloGale {
+  background: #481251;
+  position: relative;
+  border-radius: 50%;
+  width: 14em;
+  height: 13.5em;
+  /* left: 0.2em; */
+  top: 0.5em;
+}
+/* ///////////////////////////////////// */
+.ZdjencieGal {
+  top: 1.1em;
+  width: 8.5em;
+  position: relative;
+  left: 2.7em;
+  border-radius: 10%;
+  transition: 1s;
+}
+.ZdjencieGal:hover {
+  transform: scale(1.2);
+}
+.ZdjencieGal2 {
+  top: 2.9em;
+  width: 8.5em;
+  position: relative;
+  left: 2.7em;
+  border-radius: 10%;
+  transition: 1s;
+}
+.ZdjencieGal2:hover {
+  transform: scale(1.2);
+}
+.KoloGale2 {
+  background: #481251;
+  position: relative;
+  border-radius: 50%;
+  width: 14em;
+  height: 13.5em;
+  /* left: 0.2em; */
+  top: 4.1em;
+}
+
+.ZdjencieGal3 {
+  top: 1.1em;
+  width: 8.5em;
+  position: relative;
+  left: 2.7em;
+  border-radius: 10%;
+  transition: 1s;
+}
+.ZdjencieGal3:hover {
+  transform: scale(1.2);
+}
+.ZdjencieGal4 {
+  top: 4.6em;
+  width: 8.5em;
+  position: relative;
+  left: 2.7em;
+  border-radius: 10%;
+  transition: 1s;
+}
+.ZdjencieGal4:hover {
+  transform: scale(1.2);
+}
+.KoloGale3 {
+  background: #481251;
+  position: relative;
+  border-radius: 50%;
+  width: 14em;
+  height: 13.5em;
+  /* left: 0.2em; */
+  top: 2.5em;
+}
+.KoloGale3,
+.KoloGale2,
+.KoloGale {
+  /* animation-name: moveUpDown;
+  animation-duration: 1s; */
+  animation: moveUpDown 4s linear infinite 2.3s;
+}
+.KoloGale3.stopped,
+.KoloGale2.stopped,
+.KoloGale.stopped {
+  animation-play-state: paused;
+}
+
+/* ///////////////////////////////////////// */
+.Nagluwek2Pro {
+  padding: 0px;
+  margin: 0px;
+  margin-top: 3%;
+  margin-left: 3%;
+  font-size: 100%;
+}
+.KoloPro1,
+.KoloPro2,
+.KoloProMal {
+  animation: moveUpDown 4s linear infinite;
+}
+
+.KoloPro1.stopped,
+.KoloPro2.stopped,
+.KoloProMal.stopped {
+  animation-play-state: paused;
+}
+.KoloPro1 {
+  background: #40236e;
+  position: relative;
+  border-radius: 50%;
+  width: 11em;
+  height: 13em;
+  margin-top: 2.4em;
+  /* left: 27px; */
+  left: 4.5em;
+}
+.ListaPro {
+  margin-top: -8px;
+  font-size: 75%;
+  width: 14em;
+  color: #ffff;
+  margin-bottom: 0px;
+  position: relative;
+  top: 3.5em;
+  left: 0em;
+}
+.Kod {
+  position: relative;
+  font-size: 105%;
+  top: -0.8em;
+  left: -2%;
+}
+.TloKod {
+  position: relative;
+  font-size: 47%;
+  color: #ffff;
+  background-color: rgba(24, 20, 36, 1);
+  left: 1.2em;
+  width: 45.3em;
+  margin: 0px;
+  padding: 0px;
+}
+/* .kodZdjecie {
+  position: relative;
+  margin: 0px;
+  margin-left: 11px;
+  padding: 0px;
+  border-radius: 11px;
+  margin-right: 11px;
+  width: 338px;
+} */
+.projekty {
+  transition: 0.8s ease-in-out;
+}
+article.projekty.active {
+  margin-bottom: 1.5em;
+  transform: translateY(1em);
+  margin-top: 3.5em;
+  transition: 0.3s ease-in-out;
+}
+.NagluwekGaleria {
+  transition: 0.8s ease-in-out;
+}
+h3.NagluwekGaleria.active {
+  margin-bottom: 1.5em;
+  transform: translateY(1em);
+  margin-top: 5em;
+  transition: 0.3s ease-in-out;
+}
+.zainterysow_info {
+  transition: 0.8s ease-in-out;
+}
+article.zainterysow_info.active {
+  margin-bottom: 1.5em;
+  transform: translateY(1em);
+  margin-top: 5.5em;
+  transition: 0.3s ease-in-out;
+}
+.KoloProMal {
+  background: #08689f;
+  position: relative;
+  border-radius: 50%;
+  width: 6.5em;
+  height: 8.5em;
+  margin-top: 1.3em;
+  /* left: 27px; */
+  left: 1em;
+}
+.ListaPro2 {
+  margin-top: -0.6em;
+  font-size: 75%;
+  width: 9em;
+  color: #ffff;
+  margin-bottom: 0px;
+  position: relative;
+  top: 2.5em;
+  left: -1em;
+}
+.KoloPro2 {
+  background: #6e234d;
+  position: relative;
+  border-radius: 50%;
+  width: 13em;
+  height: 14.5em;
+  /* margin-top: -5px; */
+  top: -2em;
+  /* left: 27px; */
+  left: 4.5em;
+}
+.ListaPro3 {
+  margin-top: -8px;
+  font-size: 75%;
+  width: 15em;
+  color: #ffff;
+  margin-bottom: 0px;
+  position: relative;
+  top: 3.6em;
+  left: 0.5em;
+}
+@media screen and (min-width: 600px) and (max-width: 1500px) {
+  .wrapper {
+    width: 56em;
+    height: 61.5em;
+  }
+  .wrapperZai {
+    width: 56em;
+    height: 72.9em;
+  }
+  .wrapperPro {
+    width: 56em;
+    height: 51.5em;
+  }
+  .wrapperGale {
+    width: 56em;
+    height: 65.5em;
+  }
+  .Kolo2 {
+    left: 62%;
+    margin-top: -6%;
+  }
+  nav {
+    display: flex;
+    /* margin-top: 12px; */
+    margin-left: 3%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .linki {
+    margin-right: 3.5em;
+  }
+  .linki.js {
+    visibility: visible;
+    margin-right: 3.5em;
+  }
+  .js #linki_index {
+    width: 42.5%;
+  }
+  .js #linki_projekt {
+    width: 33%;
+  }
+  .js #linki_zainterosowania {
+    width: 50%;
+  }
+  .js #linki_galeria {
+    width: 34%;
+  }
+  .linki.js {
+    position: static;
+    text-align: center;
+    visibility: visible;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 2%;
+    transform: translate(0%);
+    /* transition: 0.4s ease-in-out; */
+  }
+  .Navigacja.js {
+    color: black;
+  }
+  .Omnie {
+    margin-right: 1.3em;
+  }
+  .Tytul {
+    margin-left: 3.5em;
+  }
+  .Navigacja,
+  .Navigacja.js {
+    padding-right: 1em;
+    font-size: 1em;
+  }
+  .Kolo {
+    width: 20.5em;
+    height: 19.5em;
+    left: 2%;
+  }
+  .gluwneZdjencie {
+    left: 4.3em;
+  }
+  .PierwszaCzesc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .Nagluwek {
+    margin-bottom: 0.5em;
+    margin-top: 2%;
+    font-size: 131%;
+  }
+  .Opis {
+    font-size: 94%;
+  }
+  .Nagluwek2 {
+    margin-top: -3%;
+    margin-left: 12.8%;
+    font-size: 115%;
+  }
+  .wiecej {
+    padding-left: 12.9%;
+    font-size: 85%;
+  }
+  .Lista {
+    padding-left: 14.7%;
+    margin-bottom: 0.5%;
+    font-size: 86%;
+  }
+  .Nagluwek2Zain {
+    margin-top: 2%;
+    font-size: 114%;
+    text-align: center;
+  }
+  .KoloZain2 {
+    top: -15.6em;
+    left: 31em;
+  }
+  .KoloZain {
+    left: 7em;
+    top: 4.6em;
+  }
+  .KoloMale {
+    left: 23em;
+    top: -18.5em;
+  }
+  .Nagluwek2Zain2 {
+    margin-top: -25%;
+    margin-left: 3%;
+    margin-bottom: -0.3em;
+    font-size: 114%;
+    text-align: center;
+  }
+  .KoloMale2 {
+    left: 9.5em;
+    top: 1.7em;
+  }
+  .KoloMale3 {
+    left: 38em;
+    top: -9.7em;
+  }
+  .KoloMale4 {
+    left: 30em;
+    top: -10em;
+  }
+  .KoloMale5 {
+    left: 19.5em;
+    top: -17.5em;
+  }
+  .Nagluwek2Pro {
+    font-size: 114%;
+    text-align: center;
+  }
+  .KoloPro1 {
+    margin-top: 1.5em;
+    left: 7.5em;
+  }
+  .TloKod {
+    font-size: 54%;
+    left: 46.5em;
+    width: 49.3em;
+    top: -26em;
+  }
+  .Kod {
+    font-size: 114%;
+  }
+  .KoloProMal {
+    margin-top: -9.7em;
+    left: 13em;
+  }
+  .KoloPro2 {
+    top: -11em;
+    left: 32.5em;
+  }
+  .tab {
+    display: flex;
+    justify-content: center;
+  }
+  .NagluwekGaleria {
+    font-size: 114%;
+  }
+  .Kolona1 {
+    margin-top: 1em;
+    margin-right: 3em;
+    margin-left: 2em;
+  }
+
+  .ZdjencieGal {
+    top: 1.3em;
+    width: 11.5em;
+    left: 3.8em;
+  }
+  .KoloGale,
+  .KoloGale2,
+  .KoloGale3 {
+    width: 19.1em;
+    height: 18.1em;
+  }
+  .ZdjencieGal2 {
+    width: 11.5em;
+    top: 1.8em;
+  }
+  .ZdjencieGal3 {
+    width: 11.5em;
+    top: 2.1em;
+    left: 3.7em;
+  }
+  .ZdjencieGal4 {
+    width: 11.5em;
+    top: 3.2em;
+  }
+  .KoloGale2 {
+    top: 3em;
+    left: -1em;
+  }
+
+  .KoloGale3 {
+    top: 3.5em;
+  }
+  .burger.js {
+    display: none;
+  }
+  .Navigacja.js.active:hover {
+    transform: translateY(-10%);
+    color: #481251;
+    /* text-align: center; */
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 700px) {
+  .Opis {
+    font-size: 97%;
+  }
+  .wrapper {
+    height: 65em;
+  }
+  .Tytul {
+    font-size: 1.8em;
+  }
+  .Nagluwek2 {
+    font-size: 118%;
+  }
+  .linki.js {
+    width: 42%;
+    visibility: visible;
+  }
+  .Lista {
+    font-size: 95%;
+  }
+  .DaneKont {
+    font-size: 85%;
+  }
+  .facebook {
+    width: 14%;
+  }
+  .instagram {
+    width: 13%;
+  }
+  .wiecej {
+    font-size: 88%;
+  }
+
+  .linki {
+    font-size: 110%;
+  }
+  .Nagluwek2Zain {
+    font-size: 125%;
+    margin-bottom: 1em;
+  }
+  .Nagluwek2Zain2 {
+    font-size: 125%;
+    margin-top: -27%;
+  }
+  .ListaZain {
+    left: 2%;
+    font-size: 90%;
+    width: 87%;
+    top: 20%;
+    left: 5%;
+  }
+  .KoloZain {
+    width: 18.5em;
+    height: 20em;
+  }
+  .KoloMale {
+    width: 11.5em;
+    height: 11em;
+    left: 26em;
+    top: -20.5em;
+  }
+  .Dodatek {
+    left: 2em;
+    top: 2.5em;
+    font-size: 83%;
+  }
+  .KoloZain2 {
+    width: 18.9em;
+    height: 20.5em;
+  }
+  .KoloMale2 {
+    width: 14em;
+    height: 13em;
+  }
+  .DodatekMal {
+    font-size: 83%;
+  }
+  .KoloMale3 {
+    width: 10.5em;
+    height: 10em;
+  }
+  .DodatekMal2 {
+    font-size: 83%;
+  }
+  .KoloMale4 {
+    width: 16.5em;
+    height: 16em;
+  }
+  .DodatekMal3 {
+    font-size: 83%;
+  }
+  .KoloMale5 {
+    width: 12em;
+    left: 19em;
+    height: 11.5em;
+  }
+  .DodatekMal4 {
+    left: 2.5em;
+    font-size: 83%;
+  }
+  .wrapperZai {
+    height: 82em;
+  }
+  .Nagluwek2Pro {
+    font-size: 118%;
+  }
+  .TloKod {
+    top: -25.5em;
+  }
+  .KoloPro1 {
+    width: 12em;
+    height: 14em;
+    top: 1.5em;
+  }
+  .ListaPro {
+    font-size: 83%;
+  }
+  .ListaPro3 {
+    font-size: 83%;
+  }
+  .ListaPro2 {
+    font-size: 83%;
+  }
+  .KoloPro2 {
+    width: 14em;
+    height: 15.5em;
+  }
+  .KoloProMal {
+    width: 7em;
+    height: 9em;
+  }
+  .wrapperPro {
+    height: 55em;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 599.9px) {
+  /* .Omnie {
+    margin-left: 1em;
+  }
+  .Zainteresowania {
+    margin-left: 1em;
+  }
+  .Zainteresowania2 {
+    margin-left: 1em;
+  } */
+  article.projekty.active {
+    margin-top: 4em;
+  }
+
+  .wrapper {
+    height: 65em;
+  }
+  .Kolo {
+    left: 22%;
+  }
+  .Kolo2 {
+    left: 26%;
+  }
+  .Lista {
+    padding-left: 6.5%;
+  }
+  .Nagluwek2Pro {
+    text-align: center;
+  }
+  .KoloPro1 {
+    left: 10.5em;
+  }
+  .TloKod {
+    left: 12.5em;
+    width: 48.3em;
+  }
+  .wrapperPro {
+    height: 65em;
+  }
+  .KoloPro2 {
+    left: 15.5em;
+  }
+  .KoloProMal {
+    top: 2em;
+    left: 4em;
+  }
+  .Nagluwek2Zain {
+    text-align: center;
+  }
+  .Nagluwek2Zain2 {
+    text-align: center;
+    margin-top: -3em;
+  }
+  .KoloMale {
+    left: 16em;
+    top: -4.5em;
+  }
+  .KoloZain {
+    margin-top: 5%;
+  }
+  .KoloZain2 {
+    top: -4.6em;
+  }
+  .KoloMale2 {
+    margin-top: 2%;
+  }
+  .KoloMale5 {
+    left: 1em;
+    top: -16.5em;
+  }
+  .KoloMale4 {
+    left: 11em;
+    top: -9.8em;
+  }
+  .KoloMale3 {
+    left: 21em;
+    top: -8.2em;
+  }
+  .wrapperZai {
+    height: 84em;
+  }
+  .Kod {
+    font-size: 112%;
+  }
+  div.wrapper.active {
+    height: 69em;
+  }
+  div.wrapperPro.active {
+    height: 68em;
+  }
+  div.wrapperZai.active {
+    height: 91em;
+  }
+  article.zainterysow_info.active {
+    margin-top: 6.5em;
+  }
+  div.wrapperGale.active {
+    height: 91em;
+  }
+}
+@media screen and (min-width: 570px) and (max-width: 600px) {
+  .wrapper {
+    height: 65.5em;
+  }
+  div.wrapper.active {
+    height: 69.5em;
+  }
+}
+@media screen and (min-width: 450px) and (max-width: 500px) {
+  /* .Omnie {
+    margin-left: 1em;
+  }
+  .Zainteresowania {
+    margin-left: 1em;
+  }
+  .Zainteresowania2 {
+    margin-left: 1em;
+  } */
+  .Kolo {
+    left: 20%;
+  }
+  .Kolo2 {
+    left: 23%;
+  }
+  .Nagluwek2Zain {
+    text-align: center;
+  }
+  .Nagluwek2Zain2 {
+    text-align: center;
+    margin-top: -1em;
+  }
+  .KoloMale3 {
+    left: 18em;
+    top: -6.2em;
+  }
+  .KoloMale5 {
+    left: 2.5em;
+    top: -11.5em;
+  }
+  .KoloMale2 {
+    left: 1.5em;
+    margin-top: 2%;
+  }
+  .KoloMale {
+    left: 15em;
+    top: -4em;
+  }
+  div.wrapperZai.active {
+    height: 96em;
+  }
+  .wrapperZai {
+    height: 91em;
+  }
+  .KoloMale4 {
+    left: 11em;
+    top: -6.5em;
+  }
+  .KoloZain {
+    margin-top: 5%;
+  }
+  .KoloZain2 {
+    top: -2.6em;
+  }
+  .Nagluwek2Pro {
+    text-align: center;
+  }
+  .KoloPro1 {
+    left: 8.5em;
+  }
+  .TloKod {
+    left: 10em;
+  }
+  .KoloPro2 {
+    left: 11.5em;
+  }
+  .KoloProMal {
+    left: 3em;
+    top: 2em;
+  }
+}
