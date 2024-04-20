@@ -58,9 +58,9 @@ nav {
   /* margin-top: 12px; */
   margin-left: 3%;
 }
-picture.js {
+/* picture.js {//potrzbne bylo gdy ladowalo sie js dla testu gdy coś stanie sie jesli plik js nie podlączy sie
   display: none;
-}
+} */
 nav.heder.js {
   /* display: grid; */
   /* margin-top: 12px; */
@@ -202,7 +202,7 @@ div.PierwszaCzesc.active {
 }
 
 @keyframes wyjscie {
-  /* 0% i 100% oznaca from i to i możemy zmienić animacje po procntac  */
+  /* 0% i 100% oznaca from i to, możemy zmienić animacje po procentach  */
   0% {
     transform: translateX(-150%);
   }
@@ -630,8 +630,9 @@ div.PierwszaCzesc.active {
 .KoloGale {
   /* animation-name: moveUpDown;
   animation-duration: 1s; */
-  animation: moveUpDown 4s linear infinite 2.3s;
+  animation: moveUpDown 4s linear infinite;
 }
+
 .KoloGale3.stopped,
 .KoloGale2.stopped,
 .KoloGale.stopped {
@@ -715,7 +716,7 @@ article.projekty.active {
   transition: 0.8s ease-in-out;
 }
 h3.NagluwekGaleria.active {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.8em;
   transform: translateY(1em);
   margin-top: 5em;
   transition: 0.3s ease-in-out;
@@ -1233,7 +1234,7 @@ article.zainterysow_info.active {
     margin-top: 6.5em;
   }
   div.wrapperGale.active {
-    height: 91em;
+    height: 92em;
   }
 }
 @media screen and (min-width: 570px) and (max-width: 600px) {
