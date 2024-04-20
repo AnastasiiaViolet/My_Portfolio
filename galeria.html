@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Ciekawe zdjęcia</title>
+  </head>
+  <body id="galeria">
+    <div class="wrapperGale">
+      <nav class="heder">
+        <h1 class="Tytul">Moje Portfolio</h1>
+        <div class="linki" id="linki_galeria">
+          <a href="index.html" class="Navigacja">O mnie</a>
+          <a href="projekty.html" class="Navigacja">Moje projekty</a>
+        </div>
+        <button class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </button>
+      </nav>
+      <main>
+        <h3 class="NagluwekGaleria">Ciekawe zdjęcia</h3>
+        <div class="tab">
+          <div class="Kolona1" id="kolona1">
+            <picture class="KoloGale">
+              <!-- <source
+                srcset="./zdjencia/5.1600.jpg"
+                media="(min-width:1000px)"
+              /> -->
+              <source srcset="./zdjencia/3.800.jpg" media="(min-width:800px)" />
+              <source srcset="./zdjencia/6.640.jpg" media="(min-width:600px)" />
+              <source srcset="./zdjencia/0.7.jpg" media="(min-width:300px)" />
+              <img
+                src="./zdjencia/0.5.jpg"
+                class="ZdjencieGal"
+                alt="Tymofei Krzeslo"
+              />
+            </picture>
+            <picture>
+              <!-- <source
+                srcset="./zdjencia/6.1600.jpg"
+                media="(min-width:1000px)"
+              /> -->
+              <source srcset="./zdjencia/7.800.jpg" media="(min-width:800px)" />
+              <source srcset="./zdjencia/3.640.jpg" media="(min-width:600px)" />
+              <source srcset="./zdjencia/0.2.jpg" media="(min-width:300px)" />
+              <img
+                src="./zdjencia/0.6.jpg"
+                class="ZdjencieGal3"
+                alt="Tymofei motyl"
+              />
+            </picture>
+            <picture class="KoloGale3">
+              <!-- <source
+                srcset="./zdjencia/3.1600.jpg"
+                media="(min-width:1000px)"
+              /> -->
+              <source srcset="./zdjencia/4.800.jpg" media="(min-width:800px)" />
+              <source srcset="./zdjencia/2.640.jpg" media="(min-width:600px)" />
+              <source srcset="./zdjencia/0.5.jpg" media="(min-width:300px)" />
+              <img
+                src="./zdjencia/0.3.jpg"
+                class="ZdjencieGal"
+                alt="Tymofei czapka"
+              />
+            </picture>
+          </div>
+          <div class="Kolona1" id="kolona2">
+            <picture>
+              <source srcset="./zdjencia/6.800.jpg" media="(min-width:800px)" />
+              <source srcset="./zdjencia/5.640.jpg" media="(min-width:600px)" />
+              <source srcset="./zdjencia/0.4.jpg" media="(min-width:300px)" />
+              <img
+                src="./zdjencia/0.7.jpg"
+                class="ZdjencieGal2"
+                alt="Tymofei usmiech"
+              />
+            </picture>
+            <picture class="KoloGale2">
+              <source srcset="./zdjencia/2.800.jpg" media="(min-width:800px)" />
+              <source srcset="./zdjencia/7.640.jpg" media="(min-width:600px)" />
+              <source srcset="./zdjencia/0.6.jpg" media="(min-width:300px)" />
+              <img
+                src="./zdjencia/0.4.jpg"
+                class="ZdjencieGal"
+                alt="Tymofei motyl2"
+              />
+            </picture>
+            <picture>
+              <source srcset="./zdjencia/5.800.jpg" media="(min-width:800px)" />
+              <source srcset="./zdjencia/4.640.jpg" media="(min-width:600px)" />
+              <source srcset="./zdjencia/0.3.jpg" media="(min-width:300px)" />
+
+              <img
+                src="./zdjencia/0.2.jpg"
+                class="ZdjencieGal4"
+                alt="Tymofei Krzeslo2"
+              />
+            </picture>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="kod.js"></script>
+  </body>
+</html>

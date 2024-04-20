@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Moje Portfolio</title>
+  </head>
+  <body id="index">
+    <div class="wrapper">
+      <nav class="heder">
+        <h1 class="Tytul">Moje Portfolio</h1>
+        <div class="linki" id="linki_index">
+          <a href="projekty.html" class="Navigacja">Moje projekty</a>
+          <a href="galeria.html" class="Navigacja">Ciekawe zdjęcia</a>
+        </div>
+        <button class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </button>
+      </nav>
+      <main>
+        <div class="PierwszaCzesc" id="PierwszaCzesc_index">
+          <picture class="Kolo">
+            <!-- <source srcset="./zdjencia/1.jpg" media="(min-width:1000px)" /> -->
+            <source srcset="./zdjencia/1.800.jpg" media="(min-width:800px)" />
+            <source srcset="./zdjencia/2.640.jpg" media="(min-width:600px)" />
+            <source srcset="./zdjencia/0.3.jpg" media="(min-width:300px)" />
+            <img
+              src="./zdjencia/0.1.jpg"
+              class="gluwneZdjencie"
+              alt="Zdjęcie Tymofea"
+            />
+          </picture>
+          <article class="Omnie">
+            <h3 class="Nagluwek">O mnie....</h3>
+            <p class="Opis">
+              Nazywam się Anastasiia Reznikova.Mam 21 lat. Urodziłam się
+              04/05/2002. Jestem z Ukrainy, ale już 5 lata studiuję i mieszkam w
+              Polsce. Studiuję na Politechnice Wrocławskiej na kierunku
+              Informatyka Algorytmiczna I stopnia.
+            </p>
+          </article>
+        </div>
+        <section class="Zainteresowania">
+          <h3 class="Nagluwek2">Moje zainteresowania(informatyczne):</h3>
+          <ul class="Lista">
+            <li>frontend</li>
+            <li>bazy danych</li>
+            <li>web-design</li>
+          </ul>
+          <a href="zainteresowania.html" class="wiecej">Więcej informacji</a>
+        </section>
+        <section class="Zainteresowania2">
+          <h3 class="Nagluwek2">Moje zainteresowania(poza informatyczne):</h3>
+          <ul class="Lista">
+            <li>gry komputerowe</li>
+            <li>rysowanie</li>
+            <li>gotowanie jedzenia</li>
+            <li>czytanie książek</li>
+            <li>słuchanie muzyki</li>
+            <li>oglądanie filmów</li>
+          </ul>
+          <a href="zainteresowania.html" class="wiecej">Więcej informacji</a>
+        </section>
+        <article class="Kolo2">
+          <h3 class="NagluwekKont">Moje kontakty</h3>
+          <p class="DaneKont">
+            <a href="tel:+48791092562" class="DaneKPos">+48791092562</a> /
+            <a href="+380666466410" class="DaneKPos">+380666466410</a>
+            <a href="mailto:nasty.reznikova2002@gmail.com" class="DaneKPos"
+              >nasty.reznikova2002@gmail.com</a
+            >
+          </p>
+          <a href="https://ru-ru.facebook.com/anastasiia.reznikova.14"
+            ><img src="facebook.svg" class="facebook" alt="Mój facebook"
+          /></a>
+          <a href="https://www.instagram.com/_nastya_reznikova_/"
+            ><img src="instagram.svg" class="instagram" alt="Mój instagram"
+          /></a>
+        </article>
+      </main>
+    </div>
+    <script src="kod.js"></script>
+  </body>
+</html>

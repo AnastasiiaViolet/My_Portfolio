@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Moje Projekty</title>
+  </head>
+  <body id="projekt">
+    <div class="wrapperPro">
+      <nav class="heder">
+        <h1 class="Tytul">Moje Portfolio</h1>
+        <div class="linki" id="linki_projekt">
+          <a href="index.html" class="Navigacja">O mnie</a>
+          <a href="galeria.html" class="Navigacja">Ciekawe zdjęcia</a>
+        </div>
+        <button class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </button>
+      </nav>
+      <main>
+        <article class="projekty">
+          <h3 class="Nagluwek2Pro">Moje Projekty</h3>
+          <ul class="Lista">
+            <li>Frontend Leaderbord</li>
+            <li>CV-stona internetowa</li>
+            <li>Strona Starbacks</li>
+            <li>Webowa aplikacja Notatki</li>
+            <li>Problem pięczu filosofów</li>
+          </ul>
+        </article>
+        <article class="NieProf">
+          <h3 class="Nagluwek2Pro">Moje trzy bardziej ciekawe projekty</h3>
+          <ul class="KoloPro1">
+            <li class="ListaPro">
+              Strona internetowa starbucks zawiera główną strone z wyborem z
+              trzech napoi. Przy kliknienczu na któryś napuj na stronie zmienie
+              się główny napuj.
+            </li>
+          </ul>
+          <div class="TloKod">
+            <!-- //prism js(tam) żeby byl skrol to do css ustalić rozmir oi overflow -->
+            <pre><code class="Kod">
+  &lt;script <span > type</span><span >=</span><span >"text/javascript"&gt;</span>
+  <span >// zmienia wielkie zdjiécie</span>
+  <span >function</span> imgSliser(anything) {
+    <span >document</span><span >.</span>querySelector(<span >".starbucks"</span>)<span >.</span><span >src</span> <span >=</span> <span >anything</span><span >;</span>
+    }
+    function changeCircleColor(color) {
+      const circle = document.querySelector(".circle");
+      circle.style.background = color;
+    }
+    function changeColor(color) {
+      const przycisk = document.querySelector(".content .textBox a");
+      przycisk.style.background = color;
+      const tekst = document.querySelector(".content .textBox h2 span ");
+      tekst.style.color = color;
+    }
+    &lt; /script &gt; 
+</code></pre>
+          </div>
+
+          <ul class="KoloProMal">
+            <li class="ListaPro2">
+              CV-strona internetowa, która zawiera przykładowe CV.
+            </li>
+          </ul>
+          <ul class="KoloPro2">
+            <li class="ListaPro3">
+              Frontend Leaderbord był sprojektowany z maketu, który stworzyłam
+              do projektu zespolowego. On pozwała oglondać desainy Leaderbordów
+              (tablic rankingowych dla rógnych gier) i można pobrać plik pdf.
+            </li>
+          </ul>
+        </article>
+      </main>
+    </div>
+    <script src="kod.js"></script>
+  </body>
+</html>
